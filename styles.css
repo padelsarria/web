@@ -28,6 +28,8 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    margin: 0;
+    padding: 0;    
 }
 
 nav ul li {
@@ -45,6 +47,30 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #575757;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenedor del menú hamburguesa */
+.menu-toggle-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para el menú hamburguesa */
+.menu-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Estilo del texto "Menú" */
+.menu-text {
+    display: none;
+    color: white;
+    font-size: 18px;
 }
 
 section {
@@ -201,8 +227,13 @@ tbody tr:nth-child(even) {
 
 /* Media Queries para responsividad */
 @media (max-width: 768px) {
+
     nav {
-        position: relative;
+        position: sticky;
+        top: 0;
+        background-color: #333;
+        z-index: 1000;
+        padding: 10px;
     }
     
     nav ul {
@@ -249,6 +280,34 @@ tbody tr:nth-child(even) {
         display: flex;
         justify-content: center; /* Centra los íconos en dispositivos móviles */
         margin: 20px 0; /* Agrega un margen para separarlos del contenido superior/inferior */
+    } 
+
+    .menu-toggle {
+        display: inline-block;
+    }
+
+    .menu-text {
+        display: inline-block;
+    }    
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    .nav-menu.show {
+        display: flex;
     }    
 
 }
+

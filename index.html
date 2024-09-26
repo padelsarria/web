@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Club de Padel de Sarria</title>
+
+    <!-- Meta descripción con palabras clave de alta intención -->
+    <meta name="description" content="Reserva pistas de padel en Sarria (Lugo). Ofrecemos clases de padel, alquiler de pistas y torneos en nuestro club de padel en Sarria. ¡Consulta nuestros horarios y tarifas!">
+
+    <!-- Palabras clave principales y de cola larga -->
+    <meta name="keywords" content="padel Sarria, reservar pista padel Lugo, clases padel Sarria, alquiler pistas padel Lugo, torneos padel Galicia, escuela padel Sarria, club padel Lugo, pistas padel Sarria, eventos padel Galicia, padel indoor Lugo">
+
+    <!-- Open Graph para compartir en redes sociales -->
+    <meta property="og:title" content="Club de Padel en Sarria, Lugo - Reserva Pistas y Clases de Padel">
+    <meta property="og:description" content="Club de padel en Sarria, Lugo. Alquiler de pistas de padel, clases y torneos en el mejor club de padel de la provincia.">
+    <meta property="og:image" content="images/cabecera.jpg">
+    <meta property="og:url" content="https://padelsarria.es">
+    <meta property="og:type" content="website">
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
@@ -12,12 +26,16 @@
 
     <!-- Cabecera con imagen -->
     <header>
-        <img src="images/cabecera.jpg" alt="Cabecera del club de Padel">
+        <img src="images/cabecera.jpg" alt="Club de Padel en Sarria, Lugo - Reserva de Pistas y Clases">
     </header>
 
     <!-- Menú de navegación -->
     <nav>
-        <ul>
+        <div class="menu-toggle-container">
+            <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+            <span class="menu-text">Padel Sarria</span> 
+        </div>  
+        <ul class="nav-menu">
             <li><a href="#disponibilidad">Disponibilidad Pistas</a></li>
             <li><a href="#tarifas">Tarifas y Horarios</a></li>
             <li><a href="#ubicacion">Dónde Estamos</a></li>
@@ -151,6 +169,24 @@
             
         </div>
     </section>
+
+    <!-- Código JavaScript -->
+    <script>
+
+        // Función para mostrar/ocultar el menú
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('show');
+        });
+
+        // Función para cerrar el menú al hacer clic en un enlace
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('.nav-menu').classList.remove('show');
+            });
+        });
+
+    </script>    
 
 </body>
 </html>
