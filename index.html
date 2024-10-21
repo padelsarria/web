@@ -14,7 +14,7 @@
     <!-- Open Graph para compartir en redes sociales -->
     <meta property="og:title" content="Club de Padel en Sarria, Lugo - Reserva Pistas y Clases de Padel">
     <meta property="og:description" content="Club de padel en Sarria, Lugo. Alquiler de pistas de padel, clases y torneos en el mejor club de padel de la provincia.">
-    <meta property="og:image" content="images/cabecera.jpg">
+    <meta property="og:image" content="images/cabecera.png">
     <meta property="og:url" content="https://padelsarria.es">
     <meta property="og:type" content="website">
 
@@ -26,7 +26,7 @@
 
     <!-- Cabecera con imagen -->
     <header>
-        <img src="images/cabecera.jpg" alt="Club de Padel en Sarria, Lugo - Reserva de Pistas y Clases">
+        <img src="images/cabecera.png" alt="Club de Padel en Sarria, Lugo - Reserva de Pistas y Clases">
     </header>
 
     <!-- Menú de navegación -->
@@ -120,7 +120,8 @@
     <section id="ubicacion">
         <h2>Dónde Estamos</h2>
         <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d307.71997010059465!2d-7.381317677421619!3d42.79802657371124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3047d9f07a2ef5%3A0x3e73a9bcda68e4aa!2sClub%20P%C3%A1del%20Sarria!5e0!3m2!1ses!2ses!4v1727215434308!5m2!1ses!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d413.09850146859634!2d-7.3816913970173275!3d42.79795636838897!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3047d9f07a2ef5%3A0x3e73a9bcda68e4aa!2sClub%20P%C3%A1del%20Sarria!5e1!3m2!1ses!2ses!4v1729528829241!5m2!1ses!2ses" width="100$" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
         </div>
     </section>
 
@@ -128,47 +129,36 @@
     <section id="galeria">
         <h2>Galería de Fotos</h2>
         <div class="gallery">
-            <a href="https://via.placeholder.com/1200x800" data-lightbox="galeria" data-title="Foto de pista 1">
-                <img src="images/foto1.jpg" alt="Foto de pista 1">
-            </a>
-            <a href="https://via.placeholder.com/1200x800" data-lightbox="galeria" data-title="Foto de pista 2">
-                <img src="images/foto2.jpg" alt="Foto de pista 2">
-            </a>
-            <a href="https://via.placeholder.com/1200x800" data-lightbox="galeria" data-title="Foto de pista 3">
-                <img src="images/foto3.jpg" alt="Foto de pista 3">
-            </a>
-            <a href="https://via.placeholder.com/1200x800" data-lightbox="galeria" data-title="Foto de pista 4">
-                <img src="images/foto4.jpg" alt="Foto de pista 4">
-            </a>
-            <a href="https://via.placeholder.com/1200x800" data-lightbox="galeria" data-title="Foto de pista 5">
-                <img src="images/foto5.jpg" alt="Foto de pista 5">
-            </a>
+            <img src="images/foto1.jpg" alt="Foto de pista 1" onclick="openLightbox(this)">
+            <img src="images/foto2.jpg" alt="Foto de pista 2" onclick="openLightbox(this)">
+            <img src="images/foto3.jpg" alt="Foto de pista 3" onclick="openLightbox(this)">
+            <img src="images/foto4.jpg" alt="Foto de pista 4" onclick="openLightbox(this)">
+            <img src="images/foto5.jpg" alt="Foto de pista 5" onclick="openLightbox(this)">
         </div>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+        </div>   
+             
     </section>
 
     <!-- Sección de contacto -->
-    <section id="contacto">
+    <footer id="contacto">
         <h2>Información de Contacto</h2>
-        <div class="contact-container">
-            
-            <div class="contact-info">
-                <div class="contact-item phone">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Phone_icon.png" alt="Teléfono" class="icon">
-                    <p>Teléfono: <br><strong><a href="tel:+34655062442">655 06 24 42</a></strong></p>
-                </div>
-                <div class="contact-item address">
-                    <img src="https://cdn-icons-png.flaticon.com/512/7882/7882225.png" alt="Dirección" class="icon">
-                    <p>Dirección: <br><strong>Polígono Industrial Morelle, 26<br>27600 Sarria, Lugo</strong></p>
-                </div>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/padelsarria"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="30"></a>
-                    <a href="https://www.instagram.com/padelsarriaoficial"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30"></a>
-                    <a href="https://wa.me/34655062442"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30"></a>
-                </div>
-            </div>
-            
+        
+        <p>Teléfono: <br><strong><a href="tel:+34655062442">655 06 24 42</a></strong></p>
+        <br>
+        <p>Dirección: <br><strong><a href="https://maps.app.goo.gl/yJpLicBvNX5ALvsCA">Polígono Industrial Morelle, 26<br>27600 Sarria, Lugo</a></strong></p>
+        
+        <div class="social-icons">
+            <a href="https://www.facebook.com/padelsarria" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="30"></a>
+            <a href="https://www.instagram.com/padelsarriaoficial" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30"></a>
+            <a href="https://wa.me/34655062442" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30"></a>
         </div>
-    </section>
+
+    </footer>
 
     <!-- Código JavaScript -->
     <script>
@@ -185,6 +175,37 @@
                 document.querySelector('.nav-menu').classList.remove('show');
             });
         });
+
+    </script>
+
+    <!-- Código JavaScript -->
+    <script>
+
+        function openLightbox(element) {
+            
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            if (!lightboxImg) {
+                console.error("Elemento lightbox-img no encontrado");
+                return;
+            }
+
+            // Capturar la posición actual del scroll
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;            
+
+            lightboxImg.src = element.src; // Tomamos la imagen de la galería
+            lightbox.style.display = "flex"; // Mostramos el lightbox
+
+            // Mantener la posición del scroll
+            lightbox.style.top = scrollTop + "px"; 
+
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = "none"; // Ocultamos el lightbox
+        }      
 
     </script>    
 
